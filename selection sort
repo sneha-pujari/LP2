@@ -1,0 +1,21 @@
+Problem statement: : Use selection sort to sort array.
+Program :
+def selection_sort(arr,n):
+   for i in range(n):
+      min_idx=i
+      for j in range(i+1,n):
+         if(arr[min_idx]>arr[j]):
+            min_idx=j
+      arr[i],arr[min_idx]=arr[min_idx],arr[i]
+   return arr
+ 
+
+n = int(input("Enter size of array: "))
+print("Enter elements")
+arr1=[int(input()) for i in range(n)]
+arr_org=[i for i in arr1]
+arr1=selection_sort(arr1,n)
+print("Original arary : ",arr_org)          
+print("sorted array : ",arr1)
+ 
+
